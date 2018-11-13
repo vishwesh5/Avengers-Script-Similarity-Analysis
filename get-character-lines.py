@@ -19,11 +19,11 @@ for line in script.readlines():
             if character=="":
                 continue
             elif character in chars:
-                file_handles[character].write("{}\n".format(newline))
+                file_handles[character].write("{}\n".format(newline.strip()))
             else:
                 chars.append(character)
                 file_handles[character] = open(character+".txt",'w')
-                file_handles[character].write("{}\n".format(newline))
+                file_handles[character].write("{}\n".format(newline.strip()))
         except:
             print("Unknown error. Skipping line...")
 #print("Files written for:\n{}".format("\n".join(chars)))
