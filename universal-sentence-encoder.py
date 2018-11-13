@@ -21,12 +21,12 @@ def plot_similarity(labels, features, rotation):
     corr = np.inner(features, features)
     sns.set(font_scale=1.2)
     g = sns.heatmap(corr,\
-        xticklabels=labels,\
-        yticklabels=labels,\
+        #xticklabels=labels,\
+        #yticklabels=labels,\
         vmin=0,\
         vmax=1,\
         cmap="YlOrRd")
-    g.set_xticklabels(labels, rotation=rotation)
+    #g.set_xticklabels(labels, rotation=rotation)
     g.set_title("Semantic Textual Similarity")
     #figure = g.get_figure()
     plt.tight_layout()
@@ -70,7 +70,7 @@ while flag:
         char_index = int(char_index)
         final_character_lines[characters[char_index]]=character_lines[characters[char_index]]
 
-character_lines = final_character_lines
+#character_lines = final_character_lines
 
 print("================================")
 print("Characters selected:")
